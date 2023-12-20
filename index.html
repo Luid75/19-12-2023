@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <span id="mensagem"></span>
+    <span id="data"></span>
+
+    <script>
+        var requestOptions = {
+        method: 'GET'
+};
+
+fetch("https://dslighdir.luidhenrik.repl.co/date", requestOptions)
+  .then(response => response.text())
+  .then(result => document.getElementById("data").innerHTML = result)
+  .catch(error => console.log('error', error));
+    </script>
+</body>
+
+</html>
